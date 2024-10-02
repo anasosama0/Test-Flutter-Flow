@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'user_info_container_model.dart';
 export 'user_info_container_model.dart';
 
@@ -38,23 +39,23 @@ class _UserInfoContainerWidgetState extends State<UserInfoContainerWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: const AlignmentDirectional(0.0, -1.0),
+      alignment: AlignmentDirectional(0.0, -1.0),
       child: Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+        padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
         child: Container(
-          width: MediaQuery.sizeOf(context).width * 0.9,
-          height: MediaQuery.sizeOf(context).height * 0.11,
+          width: MediaQuery.sizeOf(context).width * 1.0,
+          height: MediaQuery.sizeOf(context).height * 0.1,
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: FlutterFlowTheme.of(context).info,
             borderRadius: BorderRadius.circular(10.0),
             border: Border.all(
-              color: FlutterFlowTheme.of(context).secondaryText,
+              color: FlutterFlowTheme.of(context).borderColor,
             ),
           ),
           child: Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
+              padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -74,7 +75,7 @@ class _UserInfoContainerWidgetState extends State<UserInfoContainerWidget> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Text(
                           'Mohamed Ahmed Mohamed',
                           style: FlutterFlowTheme.of(context)
@@ -93,7 +94,7 @@ class _UserInfoContainerWidgetState extends State<UserInfoContainerWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Text(
                           'Kode ID -63526523156',
                           textAlign: TextAlign.justify,

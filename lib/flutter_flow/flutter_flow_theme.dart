@@ -63,6 +63,11 @@ abstract class FlutterFlowTheme {
   late Color error;
   late Color info;
 
+  late Color borderColor;
+  late Color textGrey;
+  late Color blackText;
+  late Color redColor;
+
   @Deprecated('Use displaySmallFamily instead')
   String get title1Family => displaySmallFamily;
   @Deprecated('Use displaySmall instead')
@@ -149,11 +154,11 @@ class LightModeTheme extends FlutterFlowTheme {
   @Deprecated('Use tertiary instead')
   Color get tertiaryColor => tertiary;
 
-  late Color primary = const Color(0xFF4B39EF);
-  late Color secondary = const Color(0xFF39D2C0);
+  late Color primary = const Color(0xFF748F35);
+  late Color secondary = const Color(0xFFF2F5EB);
   late Color tertiary = const Color(0xFFEE8B60);
   late Color alternate = const Color(0xFFE0E3E7);
-  late Color primaryText = const Color(0xFF14181B);
+  late Color primaryText = const Color(0xFF313131);
   late Color secondaryText = const Color(0xFF57636C);
   late Color primaryBackground = const Color(0xFFF1F4F8);
   late Color secondaryBackground = const Color(0xFFFFFFFF);
@@ -165,6 +170,11 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color warning = const Color(0xFFF9CF58);
   late Color error = const Color(0xFFFF5963);
   late Color info = const Color(0xFFFFFFFF);
+
+  late Color borderColor = Color(0xFFEFEFEF);
+  late Color textGrey = Color(0xFF606060);
+  late Color blackText = Color(0xFF3B3B3B);
+  late Color redColor = Color(0xFFCC4D4D);
 }
 
 abstract class Typography {
@@ -560,6 +570,11 @@ class DarkModeTheme extends FlutterFlowTheme {
   late Color warning = const Color(0xFFF9CF58);
   late Color error = const Color(0xFFFF5963);
   late Color info = const Color(0xFFFFFFFF);
+
+  late Color borderColor = Color(0xFF3602D6);
+  late Color textGrey = Color(0xFFE4CB2F);
+  late Color blackText = Color(0xFF4ED2C7);
+  late Color redColor = Color(0xFFE4590E);
 }
 
 extension TextStyleHelper on TextStyle {

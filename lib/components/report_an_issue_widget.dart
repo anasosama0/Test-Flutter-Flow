@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'report_an_issue_model.dart';
 export 'report_an_issue_model.dart';
 
@@ -46,12 +47,12 @@ class _ReportAnIssueWidgetState extends State<ReportAnIssueWidget> {
         borderRadius: BorderRadius.circular(16.0),
       ),
       child: Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
+        padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -86,9 +87,9 @@ class _ReportAnIssueWidgetState extends State<ReportAnIssueWidget> {
               ),
             ),
             Align(
-              alignment: const AlignmentDirectional(-1.0, 0.0),
+              alignment: AlignmentDirectional(-1.0, 0.0),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                 child: Text(
                   'If you have missing or wrong info , contact the customer experience team',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -114,7 +115,7 @@ class _ReportAnIssueWidgetState extends State<ReportAnIssueWidget> {
                     borderRadius: BorderRadius.circular(12.0),
                   ),
                   child: Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Text(
                       'Open Ticket',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -142,7 +143,7 @@ class _ReportAnIssueWidgetState extends State<ReportAnIssueWidget> {
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 4.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 4.0, 0.0),
                         child: FaIcon(
                           FontAwesomeIcons.whatsapp,
                           color: FlutterFlowTheme.of(context).info,
@@ -151,7 +152,7 @@ class _ReportAnIssueWidgetState extends State<ReportAnIssueWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(4.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(4.0, 0.0, 0.0, 0.0),
                         child: Text(
                           'whatsapp',
                           style: FlutterFlowTheme.of(context)

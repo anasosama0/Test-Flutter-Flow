@@ -1,5 +1,8 @@
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'circular_chat_model.dart';
 export 'circular_chat_model.dart';
 
@@ -43,7 +46,7 @@ class _CircularChatWidgetState extends State<CircularChatWidget> {
             color: Colors.transparent,
             shape: BoxShape.circle,
             border: Border.all(
-              color: const Color(0xFFE4E4E4),
+              color: Color(0xFFE4E4E4),
               width: 2.0,
             ),
           ),
@@ -63,7 +66,7 @@ class _CircularChatWidgetState extends State<CircularChatWidget> {
                 width: MediaQuery.sizeOf(context).width * 0.062,
                 height: MediaQuery.sizeOf(context).width * 0.062,
                 clipBehavior: Clip.antiAlias,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   shape: BoxShape.circle,
                 ),
                 child: Image.network(
@@ -75,11 +78,11 @@ class _CircularChatWidgetState extends State<CircularChatWidget> {
           ),
         ),
         Align(
-          alignment: const AlignmentDirectional(-0.9, -0.98),
+          alignment: AlignmentDirectional(-0.9, -0.98),
           child: Container(
             width: MediaQuery.sizeOf(context).width * 0.05,
             height: MediaQuery.sizeOf(context).width * 0.05,
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: Color(0xFF224EA1),
               shape: BoxShape.circle,
             ),

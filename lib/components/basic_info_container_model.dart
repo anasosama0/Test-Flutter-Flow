@@ -1,11 +1,12 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'user_info_container_widget.dart' show UserInfoContainerWidget;
+import 'basic_info_container_widget.dart' show BasicInfoContainerWidget;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class UserInfoContainerModel extends FlutterFlowModel<UserInfoContainerWidget> {
+class BasicInfoContainerModel
+    extends FlutterFlowModel<BasicInfoContainerWidget> {
   @override
   void initState(BuildContext context) {}
 

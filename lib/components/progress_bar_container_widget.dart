@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:provider/provider.dart';
 import 'progress_bar_container_model.dart';
 export 'progress_bar_container_model.dart';
 
@@ -40,9 +41,9 @@ class _ProgressBarContainerWidgetState
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: const AlignmentDirectional(0.0, -1.0),
+      alignment: AlignmentDirectional(0.0, -1.0),
       child: Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+        padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
         child: Container(
           width: MediaQuery.sizeOf(context).width * 0.9,
           height: MediaQuery.sizeOf(context).height * 0.17,
@@ -54,15 +55,15 @@ class _ProgressBarContainerWidgetState
             ),
           ),
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -82,7 +83,7 @@ class _ProgressBarContainerWidgetState
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 'Mohamed Ahmed Mohamed',
                                 style: FlutterFlowTheme.of(context)
@@ -103,7 +104,7 @@ class _ProgressBarContainerWidgetState
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 'Kode ID -63526523156',
                                 textAlign: TextAlign.justify,
@@ -136,7 +137,7 @@ class _ProgressBarContainerWidgetState
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -149,7 +150,7 @@ class _ProgressBarContainerWidgetState
                         animateFromLastPercent: true,
                         progressColor: FlutterFlowTheme.of(context).primary,
                         backgroundColor: FlutterFlowTheme.of(context).alternate,
-                        barRadius: const Radius.circular(10.0),
+                        barRadius: Radius.circular(10.0),
                         padding: EdgeInsets.zero,
                       ),
                       Container(
@@ -160,7 +161,7 @@ class _ProgressBarContainerWidgetState
                           borderRadius: BorderRadius.circular(10.0),
                         ),
                         child: Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Text(
                             '60%',
                             textAlign: TextAlign.center,
@@ -184,7 +185,7 @@ class _ProgressBarContainerWidgetState
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                  alignment: AlignmentDirectional(-1.0, 0.0),
                   child: Text(
                     'Complete Your Profile!',
                     textAlign: TextAlign.start,

@@ -1,27 +1,30 @@
+import '/components/category_container_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'test_page_model.dart';
-export 'test_page_model.dart';
+import 'package:provider/provider.dart';
+import 'home_page_model.dart';
+export 'home_page_model.dart';
 
-class TestPageWidget extends StatefulWidget {
-  const TestPageWidget({super.key});
+class HomePageWidget extends StatefulWidget {
+  const HomePageWidget({super.key});
 
   @override
-  State<TestPageWidget> createState() => _TestPageWidgetState();
+  State<HomePageWidget> createState() => _HomePageWidgetState();
 }
 
-class _TestPageWidgetState extends State<TestPageWidget> {
-  late TestPageModel _model;
+class _HomePageWidgetState extends State<HomePageWidget> {
+  late HomePageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => TestPageModel());
+    _model = createModel(context, () => HomePageModel());
   }
 
   @override
@@ -38,7 +41,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        body: SizedBox(
+        body: Container(
           width: MediaQuery.sizeOf(context).width * 1.0,
           height: MediaQuery.sizeOf(context).height * 1.0,
           child: Stack(
@@ -46,7 +49,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
               Container(
                 width: double.infinity,
                 height: double.infinity,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
                       Color(0xFF114903),
@@ -65,13 +68,13 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                   shape: BoxShape.rectangle,
                 ),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                   child: SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               10.0, 0.0, 10.0, 20.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -116,9 +119,9 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                         ),
                         Container(
                           width: double.infinity,
-                          height: 772.0,
-                          decoration: const BoxDecoration(
-                            color: Color(0xFFFBFBFB),
+                          height: MediaQuery.sizeOf(context).height * 0.93,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context).secondaryText,
                             borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(0.0),
                               bottomRight: Radius.circular(0.0),
@@ -127,7 +130,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                             ),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 15.0, 0.0, 15.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -135,7 +138,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                               children: [
                                 Flexible(
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 20.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -144,220 +147,11 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Container(
-                                          width: 76.0,
-                                          height: 74.0,
-                                          decoration: BoxDecoration(
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryBackground,
-                                            borderRadius:
-                                                BorderRadius.circular(10.0),
-                                            border: Border.all(
-                                              color: const Color(0xFFEFEFEF),
-                                            ),
-                                          ),
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              ClipRRect(
-                                                borderRadius:
-                                                    BorderRadius.circular(0.0),
-                                                child: SvgPicture.asset(
-                                                  'assets/images/wallet_(4)_1.svg',
-                                                  width: 24.0,
-                                                  height: 24.0,
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              Text(
-                                                'Wallet',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMediumFamily,
-                                                          color:
-                                                              const Color(0xFF313131),
-                                                          fontSize: 12.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMediumFamily),
-                                                        ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Container(
-                                          width: 76.0,
-                                          height: 74.0,
-                                          decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(10.0),
-                                            border: Border.all(
-                                              color: const Color(0xFFEFEFEF),
-                                            ),
-                                          ),
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
-                                            children: [
-                                              ClipRRect(
-                                                borderRadius:
-                                                    BorderRadius.circular(0.0),
-                                                child: SvgPicture.asset(
-                                                  'assets/images/junk-food_1.svg',
-                                                  width: 24.0,
-                                                  height: 24.0,
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              Text(
-                                                'Dinning',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMediumFamily,
-                                                          color:
-                                                              const Color(0xFF313131),
-                                                          fontSize: 12.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMediumFamily),
-                                                        ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Container(
-                                          width: 76.0,
-                                          height: 74.0,
-                                          decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(10.0),
-                                            border: Border.all(
-                                              color: const Color(0xFFEFEFEF),
-                                            ),
-                                          ),
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
-                                            children: [
-                                              ClipRRect(
-                                                borderRadius:
-                                                    BorderRadius.circular(0.0),
-                                                child: SvgPicture.asset(
-                                                  'assets/images/running-shoe_1.svg',
-                                                  width: 24.0,
-                                                  height: 24.0,
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              Text(
-                                                'Sports',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMediumFamily,
-                                                          color:
-                                                              const Color(0xFF313131),
-                                                          fontSize: 12.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMediumFamily),
-                                                        ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Container(
-                                          width: 76.0,
-                                          height: 74.0,
-                                          decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(10.0),
-                                            border: Border.all(
-                                              color: const Color(0xFFEFEFEF),
-                                            ),
-                                          ),
-                                          child: Column(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
-                                            children: [
-                                              ClipRRect(
-                                                borderRadius:
-                                                    BorderRadius.circular(0.0),
-                                                child: SvgPicture.asset(
-                                                  'assets/images/party_(1)_1.svg',
-                                                  width: 24.0,
-                                                  height: 24.0,
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              Text(
-                                                'Events',
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyMediumFamily,
-                                                          color:
-                                                              const Color(0xFF313131),
-                                                          fontSize: 12.0,
-                                                          letterSpacing: 0.0,
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                          useGoogleFonts: GoogleFonts
-                                                                  .asMap()
-                                                              .containsKey(
-                                                                  FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMediumFamily),
-                                                        ),
-                                              ),
-                                            ],
-                                          ),
+                                        wrapWithModel(
+                                          model: _model.categoryContainerModel,
+                                          updateCallback: () =>
+                                              safeSetState(() {}),
+                                          child: CategoryContainerWidget(),
                                         ),
                                       ],
                                     ),
@@ -365,12 +159,12 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                 ),
                                 Flexible(
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 15.0, 0.0, 0.0),
                                     child: GridView(
                                       padding: EdgeInsets.zero,
                                       gridDelegate:
-                                          const SliverGridDelegateWithFixedCrossAxisCount(
+                                          SliverGridDelegateWithFixedCrossAxisCount(
                                         crossAxisCount: 2,
                                         crossAxisSpacing: 15.0,
                                         mainAxisSpacing: 15.0,
@@ -383,16 +177,16 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                           height: 76.0,
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
-                                                .tertiary,
+                                                .primary,
                                             borderRadius:
                                                 BorderRadius.circular(10.0),
                                             border: Border.all(
-                                              color: const Color(0xFFEFEFEE),
+                                              color: Color(0xFFEFEFEE),
                                             ),
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 10.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -402,7 +196,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 4.0),
                                                   child: ClipRRect(
@@ -418,7 +212,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 4.0, 0.0, 0.0),
                                                   child: Text(
@@ -432,7 +226,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                                       context)
                                                                   .bodyMediumFamily,
                                                           color:
-                                                              const Color(0xFF313131),
+                                                              Color(0xFF313131),
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -458,12 +252,12 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                             borderRadius:
                                                 BorderRadius.circular(10.0),
                                             border: Border.all(
-                                              color: const Color(0xFFEFEFEE),
+                                              color: Color(0xFFEFEFEE),
                                             ),
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 10.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -473,7 +267,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 4.0),
                                                   child: ClipRRect(
@@ -489,7 +283,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 4.0, 0.0, 0.0),
                                                   child: Text(
@@ -503,7 +297,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                                       context)
                                                                   .bodyMediumFamily,
                                                           color:
-                                                              const Color(0xFF313131),
+                                                              Color(0xFF313131),
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -526,16 +320,16 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                           height: 76.0,
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
-                                                .tertiary,
+                                                .primary,
                                             borderRadius:
                                                 BorderRadius.circular(10.0),
                                             border: Border.all(
-                                              color: const Color(0xFFEFEFEE),
+                                              color: Color(0xFFEFEFEE),
                                             ),
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 10.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -545,7 +339,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 4.0),
                                                   child: ClipRRect(
@@ -561,7 +355,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 4.0, 0.0, 0.0),
                                                   child: Text(
@@ -575,7 +369,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                                       context)
                                                                   .bodyMediumFamily,
                                                           color:
-                                                              const Color(0xFF313131),
+                                                              Color(0xFF313131),
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -601,12 +395,12 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                             borderRadius:
                                                 BorderRadius.circular(10.0),
                                             border: Border.all(
-                                              color: const Color(0xFFEFEFEE),
+                                              color: Color(0xFFEFEFEE),
                                             ),
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 10.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -616,7 +410,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 4.0),
                                                   child: ClipRRect(
@@ -632,7 +426,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 4.0, 0.0, 0.0),
                                                   child: Text(
@@ -646,7 +440,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                                       context)
                                                                   .bodyMediumFamily,
                                                           color:
-                                                              const Color(0xFF313131),
+                                                              Color(0xFF313131),
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -672,12 +466,12 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                             borderRadius:
                                                 BorderRadius.circular(10.0),
                                             border: Border.all(
-                                              color: const Color(0xFFEFEFEE),
+                                              color: Color(0xFFEFEFEE),
                                             ),
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 10.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -687,7 +481,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 4.0),
                                                   child: ClipRRect(
@@ -703,7 +497,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 4.0, 0.0, 0.0),
                                                   child: Text(
@@ -717,7 +511,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                                       context)
                                                                   .bodyMediumFamily,
                                                           color:
-                                                              const Color(0xFF313131),
+                                                              Color(0xFF313131),
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -740,16 +534,16 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                           height: 76.0,
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
-                                                .tertiary,
+                                                .secondary,
                                             borderRadius:
                                                 BorderRadius.circular(10.0),
                                             border: Border.all(
-                                              color: const Color(0xFFEFEFEE),
+                                              color: Color(0xFFEFEFEE),
                                             ),
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 10.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -759,7 +553,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 4.0),
                                                   child: ClipRRect(
@@ -775,7 +569,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 4.0, 0.0, 0.0),
                                                   child: Text(
@@ -789,7 +583,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                                       context)
                                                                   .bodyMediumFamily,
                                                           color:
-                                                              const Color(0xFF313131),
+                                                              Color(0xFF313131),
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -815,12 +609,12 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                             borderRadius:
                                                 BorderRadius.circular(10.0),
                                             border: Border.all(
-                                              color: const Color(0xFFEFEFEE),
+                                              color: Color(0xFFEFEFEE),
                                             ),
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 10.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -830,7 +624,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 4.0),
                                                   child: ClipRRect(
@@ -846,7 +640,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 4.0, 0.0, 0.0),
                                                   child: Text(
@@ -860,7 +654,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                                       context)
                                                                   .bodyMediumFamily,
                                                           color:
-                                                              const Color(0xFF313131),
+                                                              Color(0xFF313131),
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -887,12 +681,12 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                             borderRadius:
                                                 BorderRadius.circular(10.0),
                                             border: Border.all(
-                                              color: const Color(0xFFEFEFEE),
+                                              color: Color(0xFFEFEFEE),
                                             ),
                                           ),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 10.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -902,7 +696,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 4.0),
                                                   child: ClipRRect(
@@ -918,7 +712,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 4.0, 0.0, 0.0),
                                                   child: Text(
@@ -932,7 +726,7 @@ class _TestPageWidgetState extends State<TestPageWidget> {
                                                                       context)
                                                                   .bodyMediumFamily,
                                                           color:
-                                                              const Color(0xFF313131),
+                                                              Color(0xFF313131),
                                                           fontSize: 12.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
