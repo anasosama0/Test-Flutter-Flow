@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import 'package:test_multitenant/pages/test_flutter_page.dart';
 
 import '/index.dart';
 import '/main.dart';
@@ -36,12 +37,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => MoreMenuWidget(),
+      errorBuilder: (context, state) => TestFlutter(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => MoreMenuWidget(),
+          builder: (context, _) => TestFlutter(),
         ),
         FFRoute(
           name: 'HomePage',
@@ -52,6 +53,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'MoreMenu',
           path: '/moreMenu',
           builder: (context, params) => MoreMenuWidget(),
+        ),
+         FFRoute(
+          name: 'TestFlutter',
+          path: '/TestFlutter',
+          builder: (context, params) => TestFlutter(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

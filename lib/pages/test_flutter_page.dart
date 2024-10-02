@@ -5,10 +5,19 @@ class TestFlutter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Column(
         children: [
-    Center(child: Text("Anas Osama",style: TextStyle(fontSize: 20, color: Colors.black),)),
+    GestureDetector(
+      onTap: () {
+        Navigator.push(context, '/homePage')
+      },
+      child: Center(child: Container(
+        color: Colors.white,
+        height: 100,
+        width: 100,
+        child: Text("Anas Osama",style: TextStyle(fontSize: 20, color: Colors.black),))),
+    ),
 
         ],
       ),
