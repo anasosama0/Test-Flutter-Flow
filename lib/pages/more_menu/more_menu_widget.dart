@@ -147,10 +147,19 @@ class _MoreMenuWidgetState extends State<MoreMenuWidget> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: [
-                                wrapWithModel(
-                                  model: _model.userInfoContainerModel,
-                                  updateCallback: () => safeSetState(() {}),
-                                  child: UserInfoContainerWidget(),
+                                InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    context.pushNamed('HomePage');
+                                  },
+                                  child: wrapWithModel(
+                                    model: _model.userInfoContainerModel,
+                                    updateCallback: () => safeSetState(() {}),
+                                    child: UserInfoContainerWidget(),
+                                  ),
                                 ),
                                 wrapWithModel(
                                   model: _model.categoryContainerModel,
